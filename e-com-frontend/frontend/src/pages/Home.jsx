@@ -6,7 +6,6 @@ function Home() {
       <Header />
       
       <main>
-        {/* Hero Banner */}
         <section className="bg-gradient-to-r from-red-500 to-red-600 text-white py-20 px-4">
           <div className="max-w-7xl mx-auto text-center">
             <h1 className="text-5xl md:text-6xl font-bold mb-4">Chào mừng đến với cửa hàng của chúng tôi</h1>
@@ -23,10 +22,14 @@ function Home() {
             <h2 className="text-4xl font-bold text-gray-900 mb-12 text-center">Sản phẩm nổi bật</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {/* Product Card Template */}
-              {[1, 2, 3, 4].map((item) => (
+              {[1, 2, 3, 4, 5, 6].map((item) => (
                 <div key={item} className="bg-white border border-gray-200 rounded-lg shadow hover:shadow-lg transition-shadow p-6">
-                  <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center">
-                    <span className="text-gray-500">Sản phẩm {item}</span>
+                  <div className="bg-gray-200 h-48 rounded-lg mb-4 flex items-center justify-center overflow-hidden">
+                    <img 
+                      src={`https://via.placeholder.com/200?text=Product+${item}`} 
+                      alt={`Product ${item}`}
+                      className="w-full h-full object-cover"
+                    />
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">Sản phẩm {item}</h3>
                   <p className="text-gray-600 text-sm mb-4">Mô tả sản phẩm ngắn gọn</p>

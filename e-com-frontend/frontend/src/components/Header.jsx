@@ -9,6 +9,10 @@ function Header() {
     navigate('/');
   };
 
+  const handleCartClick = () => {
+    // TODO: Mở giỏ hàng hoặc trang cart
+    console.log('Cart clicked');
+  };
 
   return (
     <header className="bg-white shadow-md border-b border-gray-200">
